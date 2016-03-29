@@ -4,6 +4,7 @@
 #include "matrix.h"
 #include "keymap_common.h"
 #include "backlight.h"
+#include "led.h"
 #include <stddef.h>
 
 // This a shortcut to help you visually see your layout.
