@@ -27,10 +27,6 @@ static void do_code16 (uint16_t code, void (*f) (uint8_t)) {
     f(KC_RGUI);
 }
 
-#ifdef NKRO_ENABLE
-  extern bool keyboard_nkro;
-#endif
-
 void register_code16 (uint16_t code) {
   do_code16 (code, register_code);
   register_code (code);
@@ -227,11 +223,6 @@ bool process_record_quantum(keyrecord_t *record) {
             keymap_config.swap_backslash_backspace = 1;
         } else if (keycode == MAGIC_HOST_NKRO) {
             keymap_config.nkro = 1;
-
-#ifdef NKRO_ENABLE
-            clear_keyboard(); // clear to prevent stuck keys
-            keyboard_nkro = keymap_config.nkro;
-#endif
         } else if (keycode == MAGIC_SWAP_ALT_GUI) {
             keymap_config.swap_lalt_lgui = 1;
             keymap_config.swap_ralt_rgui = 1;
@@ -253,15 +244,13 @@ bool process_record_quantum(keyrecord_t *record) {
             keymap_config.swap_backslash_backspace = 0;
         } else if (keycode == MAGIC_UNHOST_NKRO) {
             keymap_config.nkro = 0;
-#ifdef NKRO_ENABLE
-            clear_keyboard(); // clear to prevent stuck keys
-            keyboard_nkro = keymap_config.nkro;
-#endif
         } else if (keycode == MAGIC_UNSWAP_ALT_GUI) {
             keymap_config.swap_lalt_lgui = 0;
             keymap_config.swap_ralt_rgui = 0;
         }
         eeconfig_update_keymap(keymap_config.raw);
+        clear_keyboard(); // clear to prevent stuck keys
+
         return false;
       }
       break;
@@ -284,7 +273,7 @@ bool process_record_quantum(keyrecord_t *record) {
         unregister_mods(MOD_BIT(KC_LSFT));
       }
       return false;
-      break;
+      // break;
     }
 
     case KC_RSPC: {
@@ -306,7 +295,7 @@ bool process_record_quantum(keyrecord_t *record) {
         unregister_mods(MOD_BIT(KC_RSFT));
       }
       return false;
-      break;
+      // break;
     }
     default: {
       shift_interrupted[0] = true;
