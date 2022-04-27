@@ -1,12 +1,12 @@
-# IDOBAO MONTEX V2
+# IDOBAO Montex V2
 
-![MONTEX V2](https://i.imgur.com/sfHhyAn.jpg)
+![Montex V2](https://idobao.github.io/assets/img/idobao-id27.png)
 
 A hotswap RGB numpad from IDOBAO.
 
-* Keyboard Maintainer: [peepeetee](https://github.com/peepeetee)
-* Hardware Supported: IDOBAO MONTEX V2
-* Hardware Availability: https://idobao.net/collections/20-layout/products/idobao-montex-pad-hot-swappable-keyboard-kit-%E7%9A%84%E5%89%AF%E6%9C%AC
+* Keyboard Maintainer: [IDOBAOKB](https://github.com/IDOBAOKB)
+* Hardware Supported: IDOBAO Montex V2
+* Hardware Availability: https://idobao.net/products/idobao-montex-pad-hot-swappable-keyboard-kit-%E7%9A%84%E5%89%AF%E6%9C%AC
 
 Make example for this keyboard (after setting up your build environment):
 

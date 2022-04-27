@@ -1,19 +1,18 @@
-/* Copyright 2021 NachoxMacho
-*  Copyright 2022 peepeetee
-*
-* This program is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, either version 2 of the License, or
-* (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
-*/
+/* Copyright 2022 IDOBAOKB
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ */
 
 #include QMK_KEYBOARD_H
 
@@ -33,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * │Ctr│ 0     │ . │   │
      * └───┴───────┴───┴───┘
      */
-    [0] = LAYOUT_numpad_6x5(
+    [0] = LAYOUT(
         KC_GRAVE,  KC_ESC,  KC_TAB,  MO(1),   KC_BSPC,
         KC_COMMA,  KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,
         KC_LGUI,   KC_P7,   KC_P8,   KC_P9,   KC_PPLS,
@@ -57,13 +56,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * │Ctr│Insert │Del│   │
      * └───┴───────┴───┘───┘
      */
-    [1] = LAYOUT_numpad_6x5(
+    [1] = LAYOUT(
         RESET,   RGB_TOG, RGB_MOD, _______, _______,
         _______, _______, _______, _______, _______,
         RGB_SPI, RGB_HUI, RGB_SAI, RGB_VAI, _______,
-        RGB_SPD, RGB_HUD, RGB_SAD, RGB_VAD, 
+        RGB_SPD, RGB_HUD, RGB_SAD, RGB_VAD,
         _______, _______, _______, _______, _______,
-        _______, _______,           _______  
+        _______, _______,           _______
     )
 
 };
