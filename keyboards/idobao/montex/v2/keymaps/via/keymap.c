@@ -19,7 +19,7 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
      * ┌───┌───┬───┬───┬───┐
-     * │ ` │Esc│Tab│MO1│Bsp│
+     * │Esc│ ` │Tab│MO1│Bsp│
      * ├───┼───┼───┼───┼───┤
      * │ , │Num│ / │ * │ - │
      * ├───┼───┼───┼───┼───┤
@@ -33,17 +33,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * └───┴───────┴───┴───┘
      */
     [0] = LAYOUT(
-        KC_GRAVE,  KC_ESC,  KC_TAB,  MO(1),   KC_BSPC,
-        KC_COMMA,  KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS,
-        KC_LGUI,   KC_P7,   KC_P8,   KC_P9,   KC_PPLS,
-        KC_LALT,   KC_P4,   KC_P5,   KC_P6,
-        KC_LSHIFT, KC_P1,   KC_P2,   KC_P3,   KC_PENT,
-        KC_LCTRL,  KC_P0,            KC_PDOT
+        KC_ESC,    KC_GRAVE, KC_TAB,  MO(1),   KC_BSPC,
+        KC_COMMA,  KC_NLCK,  KC_PSLS, KC_PAST, KC_PMNS,
+        KC_LGUI,   KC_P7,    KC_P8,   KC_P9,   KC_PPLS,
+        KC_LALT,   KC_P4,    KC_P5,   KC_P6,
+        KC_LSHIFT, KC_P1,    KC_P2,   KC_P3,   KC_PENT,
+        KC_LCTRL,  KC_P0,             KC_PDOT
     ),
 
     /*
      * ┌───┌───┐───┬───┬───┐
-     * │Rst│ ` │Tab│MO1│Bsp│
+     * │Rst│MO3│MO2│MO1│Bsp│
      * ├───┼───┘───┼───┼───┤
      * │ , │Num│ / │ * │ - │
      * ├───┼───┼───┼───┼───┤
@@ -57,36 +57,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * └───┴───────┴───┘───┘
      */
     [1] = LAYOUT(
-        RESET,   RGB_TOG, RGB_MOD, _______, _______,
+        RESET,   MO(3),   MO(2),   _______, _______,
         _______, _______, _______, _______, _______,
-        RGB_SPI, RGB_HUI, RGB_SAI, RGB_VAI, _______,
-        RGB_SPD, RGB_HUD, RGB_SAD, RGB_VAD,
-        _______, _______, _______, _______, _______,
-        _______, _______,           _______
+        _______, KC_HOME, KC_UP,   KC_PGUP,
+        _______, KC_LEFT, XXXXXXX, KC_RGHT, _______,
+        _______, KC_END,  KC_DOWN, KC_PGDN,
+        _______, KC_INS,           KC_DEL,  _______
     ),
 
-    /*
+    /*  RGB stuff
      * ┌───┌───┐───┬───┬───┐
-     * │   │   │   │   │   │
+     * │   │Tog│MO2│MO1│Mod│
      * ├───┼───┘───┼───┼───┤
      * │   │   │   │   │   │
      * ├───┼───┼───┼───┼───┤
-     * │   │   │   │   │   │
+     * │   │Hu+│Br+│St+│   │
      * ├───┼───┼───┼───┤   │
-     * │   │   │   │   │   │
+     * │   │Sp-│   │Sp+│   │
      * ├───┼───┼───┼───┤───┤
-     * │   │   │   │   │   │
-     * ├───┼───┴───┼───┤Ent│
+     * │   │Hu-│Br-│St-│   │
+     * ├───┼───┴───┼───┤   │
      * │   │       │   │   │
      * └───┴───────┴───┘───┘
      */
     [2] = LAYOUT(
-        _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______,
-        _______, _______, _______, _______,
-        _______, _______, _______, _______, _______,
-        _______, _______,           _______
+        XXXXXXX, RGB_TOG, _______, _______, RGB_MOD,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, RGB_HUI, RGB_VAI, RGB_SAI, XXXXXXX,
+        XXXXXXX, RGB_SPD, XXXXXXX, RGB_SPI,
+        XXXXXXX, RGB_HUD, RGB_VAD, RGB_SAD, XXXXXXX,
+        XXXXXXX, XXXXXXX,          XXXXXXX
     ),
 
     [3] = LAYOUT(

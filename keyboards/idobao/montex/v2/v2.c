@@ -40,6 +40,7 @@ led_config_t g_led_config = { {
     {  0,41 }, { 56,41 }, {112,41 }, {168,41 },             // 456  (reversed)
     {224,58 }, {168,52 }, {112,52 }, { 56,52 },             // 123
     {  0,52 }, {  0,64 }, { 84,64 }, {168,64 }              // 0. & enter (reversed)
+    // {  0,52 }, {  0,64 }, { 84,64 }, {168,64 }              // 0. & enter (reversed)
     // underglow
     #ifndef ID27_DISABLE_UNDERGLOW
     , {  0,0  }, {224,0  },
@@ -50,7 +51,7 @@ led_config_t g_led_config = { {
     // LED_FLAG_MODIFIER 0x01, LED_FLAG_UNDERGLOW 0x02, LED_FLAG_KEYLIGHT 0x04, LED_FLAG_INDICATOR 0x08
     // per-key
     1, 1, 1, 1, 1,
-    4, 9, 4, 4, 4,  // num-lock = 0x01 | 0x08
+    4, 4, 4, 4, 4,  // num-lock = 0x01 | 0x08
     4, 4, 4, 4, 4,
     4, 4, 4, 4,
     4, 4, 4, 4,
