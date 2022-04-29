@@ -43,8 +43,8 @@ led_config_t g_led_config = { {
     // {  0,52 }, {  0,64 }, { 84,64 }, {168,64 }              // 0. & enter (reversed)
     // underglow
     #ifndef ID27_DISABLE_UNDERGLOW
-    , {  0,0  }, {224,0  },
-    { 224,64}, {  0,64 }   // (reversed)
+    , {224,64  }, {  0,64  },
+      {  0,0 }, { 224,0}
     #endif
 }, {
     // LED Index to Flag
