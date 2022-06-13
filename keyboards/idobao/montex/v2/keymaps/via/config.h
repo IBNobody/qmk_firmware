@@ -17,7 +17,3 @@
 #pragma once
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
-
-#if defined(RGB_MATRIX_ENABLE)
-    #define VIA_QMK_RGBLIGHT_ENABLE
-#endif
