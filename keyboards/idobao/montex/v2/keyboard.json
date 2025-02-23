@@ -16,6 +16,9 @@
     "ws2812": {
         "pin": "B1"
     },
+    "dynamic_keymap": {
+        "layer_count": 4
+    },
     "rgb_matrix": {
         "animations": {
             "alphas_mods": true,
